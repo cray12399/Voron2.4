@@ -5,7 +5,8 @@ klippy_uds_address: /home/pi/printer_data/comms/klippy.sock
 
 [authorization]
 trusted_clients:
-    10.3.0.0/16
+    100.81.106.88
+    172.20.0.0/16
     10.0.0.0/8
     127.0.0.0/8
     169.254.0.0/16
@@ -42,8 +43,4 @@ channel: stable
 repo: fluidd-core/fluidd
 path: ~/fluidd
 
-[update_manager canboot]
-type: git_repo
-origin: https://github.com/Arksine/katapult.git
-path: ~/katapult
-is_system_service: False
+[include octoeverywhere-system.cfg]
